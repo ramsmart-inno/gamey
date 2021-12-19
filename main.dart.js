@@ -15842,7 +15842,7 @@ al7:function(a){var s=0,r=P.x(t.z),q,p
 var $async$al7=P.t(function(b,c){if(b===1)return P.u(c,r)
 while(true)switch(s){case 0:P.B("do querying")
 s=3
-return P.n(Z.aP("https://glitto.in/v1/graphql",$.aR).e6(0,"  query MySubscription ($hint: String!){\n  usertransanctions(where: {transid: {_eq: $hint}}) {\n    amount\n    userdata {\n      mailid\n    }\n    transid\n    description\n    category\n  }\n}",P.Y(["hint",a],t.X,t.z)),$async$al7)
+return P.n(Z.aP("https://glitto.in/v1/graphql",$.aR).e6(0,"  query MySubscription ($hint: String!){\n  usertransanctions(where: {transid: {_regex: $hint}}) {\n    amount\n    userdata {\n      mailid\n    }\n    transid\n    description\n    category\n  }\n}",P.Y(["hint",a],t.X,t.z)),$async$al7)
 case 3:p=c
 P.B(p)
 P.B("query get data")
